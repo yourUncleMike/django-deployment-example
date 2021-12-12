@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+  {% extends "basic_app/base.html" %}
+  {% block body_block %}
+  {% load my_extras %}
+  <h1>Welcome home :)</h1>
+  <h2>This is an example of template inheritance with filters.</h2>
+  <h3>{{ text | censor:'e' | censor:'i' }}</h3>
+  <h3>When you <b>|add:"99"</b> to {{ number }}, you get {{ number | add:"99" }}</h3>
+{% endblock %}
